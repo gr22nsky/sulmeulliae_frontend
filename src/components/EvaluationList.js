@@ -261,7 +261,7 @@ function EvaluationList() {
                                 <div style={styles.font}>{evaluation.origin}</div>
                                 <div style={styles.font}>♥ {evaluation.like_count}</div>
                                 <div style={styles.font}>{evaluation.avg_rating} / 5</div>
-                                <div style={styles.font}>조회수: {evaluation.viewcounts}</div>
+                                <div style={styles.font}>조회수{evaluation.viewcounts}</div>
                             </Link>
                         </li>
                     ))}
