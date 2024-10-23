@@ -82,7 +82,7 @@ function App() {
             margin: '0 10px',
             color: '#ffffff',
             textDecoration: 'none',
-            fontWeight: 'bold',
+            fontWeight: 'semi-bold',
         },
         span: {
             color: '#f0e5d1',
@@ -119,7 +119,6 @@ function App() {
             padding: '20px',
             backgroundColor: '#faf4e1',
             borderRadius: '10px',
-            boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)',
         },
         productItem: {
             padding: '20px',
@@ -148,7 +147,6 @@ function App() {
             padding: '20px',
             backgroundColor: '#faf4e1',
             borderRadius: '10px',
-            boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)',
         },
         cartItem: {
             padding: '20px',
