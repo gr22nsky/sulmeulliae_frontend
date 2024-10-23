@@ -186,29 +186,29 @@ function App() {
                         {/* 로고 이미지 추가 */}
                         <div style={styles.logoContainer}>
                             <Link to="/">
-                                <img src="/images/sulmeulliae.png" alt="Sulmeulliae Logo" style={styles.logo} />
+                                <img src="/images/sulmeulliae_logo.png" alt="Sulmeulliae Logo" style={styles.logo} />
                             </Link>
                         </div>
                         <div>
-                            <Link to="/" style={styles.link}>홈 |</Link>
-                            <Link to="/products" style={styles.link}>이달의 술 Shop |</Link>
-                            <Link to="/community/freeboard" style={styles.link}>자유 게시판 |</Link>
-                            <Link to="/community/question" style={styles.link}>질문 게시판 |</Link>
-                            <Link to="/community/discussion" style={styles.link}>토론 게시판 |</Link>
-                            <Link to="/community/drinkmate" style={styles.link}>술친구 채팅방 |</Link>
+                            <Link to="/" style={styles.link}></Link>
+                            <Link to="/products" style={styles.link}>Shop</Link>
+                            <Link to="/community/freeboard" style={styles.link}>Free Board</Link>
+                            <Link to="/community/question" style={styles.link}>Q&A</Link>
+                            <Link to="/community/discussion" style={styles.link}>Discussion</Link>
+                            <Link to="/community/drinkmate" style={styles.link}>Chat</Link>
                             {loggedIn ? (
                                 <>
-                                    <Link to="/chatbot" style={styles.link}>술추천챗봇 |</Link>
+                                    <Link to="/chatbot" style={styles.link}>Chatbot</Link>
                                     <Link to={`/profile/${username}`} style={styles.link}>
                                         <span style={styles.span}>{username}님</span>
                                     </Link>
-                                    <Link to="/products/cart" style={styles.link}>장바구니</Link>
+                                    <Link to="/products/cart" style={styles.link}>Cart</Link>
                                     <LogoutButton handleLogout={handleLogout} />
                                 </>
                             ) : (
                                 <>
-                                    <Link to="/login" style={styles.link}>로그인</Link>
-                                    <Link to="/signup" style={styles.link}>회원가입</Link>
+                                    <Link to="/login" style={styles.link}>Login</Link>
+                                    <Link to="/signup" style={styles.link}>Signup</Link>
                                 </>
                             )}
                         </div>
