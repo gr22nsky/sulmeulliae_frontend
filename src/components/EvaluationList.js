@@ -100,9 +100,9 @@ function EvaluationList() {
             maxWidth: '1200px',
             margin: '50px auto',
             padding: '20px',
-            backgroundColor: '#faf4e1',
+            backgroundColor: '#ffffff',
             borderRadius: '10px',
-            boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)',
+
         },
         categoryButtons: {
             display: 'flex',
