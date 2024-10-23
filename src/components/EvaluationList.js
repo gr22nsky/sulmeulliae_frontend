@@ -156,7 +156,6 @@ function EvaluationList() {
             padding: 0,
         },
         listItem: {
-            border: '1px solid #ddd',
             borderRadius: '10px',
             backgroundColor: '#fff',
             transition: 'transform 0.2s',
@@ -221,7 +220,7 @@ function EvaluationList() {
                 <div style={styles.searchSection}>
                     <input
                         type="text"
-                        placeholder="검색어를 입력하세요 (제목, 내용, 카테고리)"
+                        placeholder="검색어를 입력하세요(제목, 내용, 카테고리)"
                         value={searchTerm}
                         onChange={(e) => setSearchTerm(e.target.value)}
                         style={styles.searchInput}
