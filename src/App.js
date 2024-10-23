@@ -80,7 +80,7 @@ function App() {
         },
         link: {
             margin: '0 10px',
-            color: '#f0e5d1',
+            color: '#ffffff',
             textDecoration: 'none',
             fontWeight: 'bold',
         },
