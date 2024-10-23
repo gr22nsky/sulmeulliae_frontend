@@ -138,10 +138,9 @@
 > Django Admin을 기반으로 제공되는 관리 인터페이스로, 개발자가 별도의 코드를 작성하지 않고도 데이터를 쉽게 관리할 수 있기 때문에 저희처럼 개발 기간이 짧은 프로젝트에 더 용이하다고 느꼈고, 커스터마이징을 통해 각 프로젝트에 맞는 관리 도구를 구축할 수 있으므로 효율적인 데이터 관리와 운영 지원을 위해 사용하게 되었습니다.
 
 
-### ◻ Github Actions & Code Deploy (CI/CD) _ BE
+### ◻ Github Actions (CI/CD) _ BE
 
-> 자동 빌드/배포를 위하여 깃허브 액션과 코드디플로이를 활용하여 CI/CD 를 구축했습니다.         
-> [AWS CodeDeploy](https://github.com/HH9C4/BBBB-BE/wiki/%5BTech%5D-AWS-CodeDeploy)
+> 자동 빌드/배포를 위하여 깃허브 액션을 활용하여 CI/CD 를 구축했습니다.         
 
 ### ◻ Google SMTP _ BE
 
@@ -198,12 +197,14 @@
 ![ERDiagram](https://github.com/user-attachments/assets/3cb58f82-36d8-4630-a707-483a557ec5a5)
 
 <br>
+
 ## 📝 Technologies & Tools (FE) 📝
 
 <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=JavaScript&logoColor=white"> <img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=React&logoColor=white"/> <img src="https://img.shields.io/badge/CreateReactApp-09D3AC?style=for-the-badge&logo=CreateReactApp&logoColor=white"/> <img src="https://img.shields.io/badge/Axios-5A29E4?style=for-the-badge&logo=Axios&logoColor=white"/> <img src="https://img.shields.io/badge/CloudFront-232F3E?style=for-the-badge&logo=Amazon%20AWS&logoColor=white"/> 
 <br><img src="https://img.shields.io/badge/VisualStudioCode-007ACC?style=for-the-badge&logo=VisualStudioCode&logoColor=white"/> <img src="https://img.shields.io/badge/git-F05032?style=for-the-badge&logo=git&logoColor=white"/> <img src="https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white"/> <img src="https://img.shields.io/badge/GithubActions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white"/>  <img src="https://img.shields.io/badge/Notion-000000?style=for-the-badge&logo=Notion&logoColor=white"/> <img src="https://img.shields.io/badge/Slack-4A154B?style=for-the-badge&logo=slack&logoColor=white"/>
 
 <br>
+
 ## 📝 Technologies & Tools (BE) 📝
 
 <img src="https://img.shields.io/badge/JSONWebToken-000000?style=for-the-badge&logo=JSONWebTokens&logoColor=white"/> <img src="https://img.shields.io/badge/WebSocket-010101?style=for-the-badge&logo=&logoColor=white"/> <img src="https://img.shields.io/badge/PostgreSQL-336791?style=for-the-badge&logo=PostgreSQL&logoColor=white"/> <img src="https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=Redis&logoColor=white"/> <img src="https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=Ubuntu&logoColor=white"/>
