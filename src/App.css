@@ -1,21 +1,6 @@
-nav {
-    margin-bottom: 20px;
-}
-
-nav a {
-    margin-right: 10px;  /* 링크 사이에 간격을 줌 */
-    text-decoration: none;
-    color: blue;
-}
-
-nav a:hover {
-    text-decoration: underline;
-}
-
-nav span {
-    margin-right: 10px;  /* 사용자명과 로그아웃 버튼 간의 간격 추가 */
-}
-
-button {
-    margin-left: 10px;  /* 로그아웃 버튼에 약간의 간격 추가 */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: rgb(230 229 215);
 }

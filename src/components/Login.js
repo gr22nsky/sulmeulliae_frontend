@@ -3,7 +3,7 @@ import api from '../services/api';
 import { useNavigate } from 'react-router-dom';
 
 function Login({ setLoggedIn, setUsername }) {
-    const [username, setUsernameInput] = useState('');
+    const [usernameInput, setUsernameInput] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
     const navigate = useNavigate();
@@ -12,17 +12,17 @@ function Login({ setLoggedIn, setUsername }) {
         event.preventDefault();
 
         // 로그인 API 호출
-        api.post('/accounts/signin/', { username, password })
+        api.post('/accounts/signin/', { username: usernameInput, password })
             .then((response) => {
-                console.log(response.data);  // 응답 데이터 확인
-
                 if (response.data.access) {
                     // 토큰을 localStorage에 저장
                     localStorage.setItem('accessToken', response.data.access);
                     localStorage.setItem('refreshToken', response.data.refresh);
+                    localStorage.setItem('username', usernameInput);  // 사용자명도 localStorage에 저장
+                    localStorage.setItem('userId', response.data.user_id);
 
-                    // 사용자명 저장 및 로그인 상태 업데이트
-                    setUsername(username);  // App.js로 사용자명 전달
+                    // 상태 업데이트 및 페이지 이동
+                    setUsername(usernameInput);
                     setLoggedIn(true);
                     navigate('/');
                 } else {
@@ -35,33 +35,87 @@ function Login({ setLoggedIn, setUsername }) {
             });
     };
 
+    // 스타일 정의
+    const styles = {
+        formContainer: {
+            maxWidth: '600px',
+            margin: '50px auto',
+            padding: '40px',  // 컨테이너와 입력 필드 사이에 여백 추가
+            backgroundColor: '#faf4e1',
+            borderRadius: '10px',
+            boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)',
+        },
+        heading: {
+            textAlign: 'center',
+            fontSize: '2rem',
+            marginBottom: '20px',
+            color: '#333',
+        },
+        formGroup: {
+            marginBottom: '20px',
+        },
+        label: {
+            display: 'block',
+            fontSize: '1.2rem',
+            marginBottom: '10px',
+            color: '#333',
+        },
+        input: {
+            width: '100%',
+            padding: '10px',
+            borderRadius: '5px',
+            border: '1px solid #ddd',
+            fontSize: '1rem',
+        },
+        button: {
+            width: '100%',
+            padding: '10px',
+            backgroundColor: '#ffd700',
+            border: 'none',
+            borderRadius: '5px',
+            cursor: 'pointer',
+            fontWeight: 'bold',
+            color: '#3c6255',
+        },
+        buttonHover: {
+            backgroundColor: '#e6c200',
+        },
+        errorMessage: {
+            color: 'red',
+            marginTop: '10px',
+        },
+    };
+
     return (
-        <div>
-            <h2>로그인</h2>
+        <div style={styles.formContainer}>
+            <h2 style={styles.heading}>로그인</h2>
             <form onSubmit={handleSubmit}>
-                <div>
-                    <label>아이디</label>
+                <div style={styles.formGroup}>
+                    <label style={styles.label}>아이디</label>
                     <input
                         type="text"
-                        value={username}
+                        value={usernameInput}
                         onChange={(e) => setUsernameInput(e.target.value)}
                         required
+                        style={styles.input}
                     />
                 </div>
-                <div>
-                    <label>비밀번호</label>
+                <div style={styles.formGroup}>
+                    <label style={styles.label}>비밀번호</label>
                     <input
                         type="password"
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
                         required
+                        style={styles.input}
                     />
                 </div>
-                {error && <p style={{ color: 'red' }}>{error}</p>}
-                <button type="submit">로그인</button>
+                {error && <p style={styles.errorMessage}>{error}</p>}
+                <button type="submit" style={styles.button}>로그인</button>
             </form>
         </div>
     );
 }
 
 export default Login;
+
